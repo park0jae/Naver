@@ -1,0 +1,101 @@
+header{
+    /* header의 양쪽 여백(margin)을 동등하게 맞춤 -> 수평 가운데 정렬*/
+    margin:auto;
+    width:1080px;
+    height: 215px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    height:215px;
+}
+fieldset{
+    border:none;
+}
+.hidden{
+    /* legend 안보이게 설정 */
+    position: absolute;
+    /* 검색이 세로로 나오게 되서 overflow로 인하여 숨겨짐 */
+    height:1px;
+    width:1px;
+    overflow: hidden;
+    /* clip은 깎는거임 1px 로 다 깎아버림 */
+    clip: rect(1px ,1px ,1px ,1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    /* 공백 처리 속성 한줄에 다 배치함 원래는 검색이 세로로 나옴 height1 때매*/
+    white-space: nowrap;
+}
+.links{
+    /* 네이버를 시작페이지로 , 해피빈 , 쥬니버네이버 상단오른쪽 위치*/
+    position:absolute;
+    top:0;
+    right:0;
+}
+.link_text{
+    font-size: 10px;
+    margin-left: 5px;;
+}
+.img_logo{
+    margin-bottom:12px;
+    width:220px;
+    height:80px;
+}
+.search-box{
+    width:550px;
+    height:50px;
+    border:2px solid #03cf5d;
+    display : flex;
+    align-items: center;
+}
+.search-box input{
+    flex:5;
+    height:46px;
+    margin:0;
+    padding:0;
+    border:none;
+    outline: none;
+}
+
+.search-box button{
+    /*flex 에서 크기 1만큼 차지*/
+    flex: 1;
+    height:47px;
+    margin:0;
+    padding:0;
+    /* 테두리 다없앰*/
+    border:none;
+    outline:none;
+    background:#03cf5d;
+    color: #ffffff;
+}
+/* 직계 자식 nav 만 해당 (nav안에있는 손자들 까지는 관여 x)*/
+header > nav{
+    width:100%;
+    height:45px;
+    position: absolute;
+    bottom:0;
+}
+.nav-item ul > li{
+    display: inline-block;
+    margin-left: 8px;
+}
+
+/* <ul>하위 7번째 <li>까지 각각 내부의 <a> 태그에 접근*/
+/* 앞에서부터 7개만 선택 */
+.nav-item ul>li:nth-child(-n+7) > a{
+    color:#03cf5d;
+}
+
+.nav-item ul>li>a{
+    text-decoration: none;
+    cursor:pointer;
+    font-weight: bolder;
+}
+
+.keyword{
+    display: inline-block;
+    position: absolute;
+    top:12px;
+    font-weight: bold;
+    right:0;
+}

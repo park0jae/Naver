@@ -1,0 +1,32 @@
+*{
+    /* 길이 계산 편하게 하기 위함 */
+    box-sizing: border-box;
+}
+body{
+    /* body의 기본 마진 없애기 */
+    margin:0;
+    font-family: sans-serif;
+}
+a{
+    /* 링크의 기본 밑줄 제거*/
+    text-decoration: none;
+    color: #888;
+}
+a:hover{
+    /* 마우스 커서 올라가면 밑줄 다시 생성 */
+    text-decoration: underline;
+}
+.color_naver{
+    color:#03cf5d;
+}
+.text_bold-13{
+    font-weight: bold;
+    font-size: 13px;;
+}
+.gap-box{
+    background-color: #f2f4f7;
+    height:10px;
+}
+.border-dee3eb{
+    border: 1px solid #dee3eb;
+}
