@@ -1,1 +1,1 @@
-# Naver
+# Naver first-page clone coding
